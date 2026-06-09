@@ -235,3 +235,7 @@ body::after{
         width: 100%;
     }
 }
+
+img {
+    border: 20px solid #2f004f;
+}
