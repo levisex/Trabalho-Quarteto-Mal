@@ -1,0 +1,41 @@
+* {
+    margin: 20px;
+    padding: 15px;
+    background-color:unset;
+
+}
+
+h1 {
+    font-size: 25px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: large;
+}
+
+p {
+    font-size: 15px;
+    color: black;
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    font-size: 10;
+    background-color: black;
+    margin-right: 50px;
+    text-align: center;
+    font-size: small;
+    box-sizing: content-box;
+}
+
+a {
+    font-size: 15px;
+    color:burlywood ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: medium;
+
+}
