@@ -59,6 +59,13 @@ button {
     color: #333;
     transition: transform 0.2s, background-color 0.3s;
 }
+.gif-canto-de-cima {
+    position: fixed;
+    top: 20px;
+    left: 50px;
+    width: 160px;
+    z-index: 9999;
+}
 .gif-canto {
     position: fixed;
     bottom: 50px;
