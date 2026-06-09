@@ -39,7 +39,7 @@ button {
     text-align: center;
     font-style: oblique;
     box-sizing: content-box;
-    margin: 20px;
+    margin: left: 800px;
     padding: 15px;
 
 }
@@ -49,4 +49,12 @@ a {
     color:burlywood ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: medium;
+}
+
+img {
+    margin-left: 800px;
+    padding: 10px;
+    border: 10px solid black;
+    margin: 100px;
+    background-color: darkcyan;
 }

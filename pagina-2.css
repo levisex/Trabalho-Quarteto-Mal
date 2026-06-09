@@ -24,12 +24,14 @@ p {
 }
 
 button {
+    text-align: justify;
     font-size: 10;
     background-color: black;
     margin-right: 50px;
-    text-align: center;
+    text-indent: 10px;
     font-size: small;
     box-sizing: content-box;
+    margin-left: 800px;
 }
 
 a {
@@ -37,5 +39,14 @@ a {
     color:burlywood ;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: medium;
+
+}
+
+img {
+    margin-left: px;
+    padding: 10px;
+    border: 10px solid black;
+    margin: 100px;
+    background-color: darkcyan;
 
 }
