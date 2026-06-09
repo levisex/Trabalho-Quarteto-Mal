@@ -19,7 +19,7 @@ body.terceira_pagina{
         rgba(0,0,0,0.55),
         rgba(0,0,0,0.75)
     ),
-    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?q=80&w=2070")
+    url(imagens/galactus.jpg)
     center center/cover no-repeat fixed;
 
     padding: 50px;
