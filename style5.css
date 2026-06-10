@@ -73,3 +73,30 @@ button {
     width: 190px;
     z-index: 9999;
 }
+.raio {
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+    opacity: 1;
+    animation: desaparecer 0.35s forwards;
+}
+
+.raio svg {
+    overflow: visible;
+}
+
+.raio path {
+    fill: none;
+    stroke: #7df9ff;
+    stroke-linecap: round;
+    filter:
+        drop-shadow(0 0 4px #fff)
+        drop-shadow(0 0 8px #00d9ff)
+        drop-shadow(0 0 16px #00d9ff);
+}
+
+@keyframes desaparecer {
+    to {
+        opacity: 0;
+    }
+}

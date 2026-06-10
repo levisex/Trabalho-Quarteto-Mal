@@ -20,5 +20,95 @@
         Voltar para anterior
     <img src="assets/annihilus-marvel.gif" class="gif-canto" alt="gif">
     <img src="assets/marvel-strike-force-annihilus.gif" class="gif-canto-de-cima" alt="gif">
+<script>
+let mousePressionado = false;
+let mouseX = 0;
+let mouseY = 0;
+
+document.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+
+    if (mousePressionado) {
+        criarRaio(mouseX, mouseY, true);
+    }
+});
+
+document.addEventListener("mousedown", (e) => {
+    mousePressionado = true;
+    criarRaio(e.clientX, e.clientY, true);
+});
+
+document.addEventListener("mouseup", () => {
+    mousePressionado = false;
+});
+
+document.addEventListener("click", (e) => {
+    criarRaio(e.clientX, e.clientY, false);
+});
+
+function criarRaio(x, y, forte = false) {
+
+    const quantidade = forte ? 6 : 3;
+    const comprimento = forte ? 180 : 120;
+    const largura = forte ? 5 : 2;
+
+    for(let i = 0; i < quantidade; i++) {
+
+        const container = document.createElement("div");
+        container.className = "raio";
+
+        container.style.left = x + "px";
+        container.style.top = y + "px";
+
+        const angulo = Math.random() * 360;
+
+        const svg = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "svg"
+        );
+
+        svg.setAttribute("width", comprimento);
+        svg.setAttribute("height", comprimento);
+
+        const path = document.createElementNS(
+            "http://www.w3.org/2000/svg",
+            "path"
+        );
+
+        let d = "M 10 10";
+
+        for(let p = 1; p <= 8; p++) {
+            const px = p * (comprimento / 8);
+            const py =
+                p * (comprimento / 8) +
+                (Math.random() * 40 - 20);
+
+            d += ` L ${px} ${py}`;
+        }
+
+        path.setAttribute("d", d);
+        path.setAttribute("stroke-width", largura);
+
+        if (forte) {
+            path.setAttribute("stroke", "#ffffff");
+        } else {
+            path.setAttribute("stroke", "#7df9ff");
+        }
+
+        svg.appendChild(path);
+        container.appendChild(svg);
+
+        container.style.transform =
+            `translate(-50%, -50%) rotate(${angulo}deg)`;
+
+        document.body.appendChild(container);
+
+        setTimeout(() => {
+            container.remove();
+        }, 350);
+    }
+}
+</script>
     </body>
     </html>
