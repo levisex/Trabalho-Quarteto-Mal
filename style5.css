@@ -100,3 +100,15 @@ button {
         opacity: 0;
     }
 }
+.raio {
+    animation: sumir 0.3s forwards;
+}
+
+@keyframes sumir {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
